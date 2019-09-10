@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "${DIB_DEBUG_TRACE:-0}" -gt 0 ]; then
+    set -x
+fi
+set -eu
+set -o pipefail
+
+echo 'deb http://linux.dell.com/repo/community/openmanage/930/bionic/ bionic main' | tee -a /etc/apt/sources.list.d/linux.dell.com.sources.list
+gpg --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 1285491434D8786F
+apt update -y
