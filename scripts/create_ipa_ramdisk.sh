@@ -1,0 +1,1 @@
+DIB_DEV_USER_AUTHORIZED_KEYS=~/.ssh/id_rsa.pub DIB_REPOREF_ironic_agent=stable/rocky DIB_REPOLOCATION_ironic_agent=/home/pavelr/projects/ipa DIB_INSTALLTYPE_ironic_agent=source DIB_DEV_USER_USERNAME=devuser DIB_DEV_USER_PWDLESS_SUDO=yes DIB_DEV_USER_PASSWORD=<password> disk-image-create ironic-agent ubuntu devuser -o ipa_discover
