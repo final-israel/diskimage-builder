@@ -6,6 +6,12 @@ fi
 set -eu
 set -o pipefail
 
-echo 'deb http://linux.dell.com/repo/community/openmanage/930/bionic/ bionic main' | tee -a /etc/apt/sources.list.d/linux.dell.com.sources.list
-gpg --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 1285491434D8786F
-apt update -y
+case $DISTRO_NAME in
+    'ubuntu'|'debian')
+        echo 'deb http://linux.dell.com/repo/community/openmanage/930/bionic/ bionic main' | tee -a /etc/apt/sources.list.d/linux.dell.com.sources.list
+		gpg --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 1285491434D8786F
+		gpg -a --export 1285491434D8786F | apt-key add -
+		cat /etc/apt/sources.list.d/linux.dell.com.sources.list
+		apt update -y
+        ;;
+esac
