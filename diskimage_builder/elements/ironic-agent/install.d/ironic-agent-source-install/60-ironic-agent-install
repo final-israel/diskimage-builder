@@ -25,6 +25,7 @@ $IPADIR/venv/bin/pip install -c $IPADIR/upper-constraints.txt $IPADIR
 # parameter for pip install so we don't have to manually create a symlink
 # create the launcher link so services can use it
 ln -s $IPADIR/venv/bin/ironic-python-agent /usr/local/bin/ironic-python-agent
+ln -s $IPADIR/venv/bin/hardware-detect /usr/local/bin/hardware-detect
 
 case "$DIB_INIT_SYSTEM" in
     upstart)
