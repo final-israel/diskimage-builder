@@ -31,16 +31,13 @@ sudo ln -s ./sbin/init ./
 sudo find . -xdev \
     -path './sys/*' -prune -o \
     -path './tmp/*' -prune -o \
-    -path './boot/*' -prune -o \
     -path './root/.cache' -prune -o \
-    -path './usr/include/*' -prune -o \
     -path './usr/lib/locale/*' -prune -o \
     -path './usr/share/doc/*' -prune -o \
     -path './usr/share/man/*' -prune -o \
     -path './usr/share/info/*' -prune -o \
     -path './usr/share/licenses/*' -prune -o \
     -path './usr/share/misc/m*' -prune -o \
-    -path './usr/src/kernels/*' -prune -o \
     -path './var/cache/*' -prune -o \
     -name '*.pyc' -prune -o \
     -name '*.pyo' -prune -o \

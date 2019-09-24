@@ -19,3 +19,4 @@ psmisc:
 dosfstools:
 mdadm:
 srvadmin-all:
+biosdevname:
